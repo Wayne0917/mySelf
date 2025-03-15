@@ -1,0 +1,192 @@
+/* 網頁初始化 */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: "ZCOOL QingKe HuangYou", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    letter-spacing: 7px;
+    font-size: 2rem;
+    margin-bottom: 10%;
+    line-height: 50px;
+}
+h2{
+    letter-spacing: 7px;
+    margin: 30px;
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* 導覽---最外層 */
+
+.navigator{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(110, 110, 110, 0.199);
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+
+/* 導覽---Home */
+.navigatorHome{
+    margin-left: 5%;
+}
+.navigatorHome a{
+    position: relative;
+}
+.navigatorHome img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+}
+.navigatorHome p{
+    position: absolute;
+    left: 67px;
+    letter-spacing: 0;
+}
+
+
+/* 導覽---Ul層 */
+.navigatorUl{
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+.navigatorLi{
+    margin: 0 50px;
+}
+.navigatorLi:hover{
+    text-shadow: 1px 1px black;
+    border-bottom: 5px solid black;
+    transform: scale(0.9);
+    transition: 1.5s;
+}
+/* 導覽---漢堡選單層 */
+.hamburger{
+    display: none;
+    cursor: pointer;
+    align-content: center;
+    margin-right: 10px;
+    position: relative;
+    z-index: 10000;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 5px 50px;
+    background-color: black;
+}
+
+
+/* 圖片輪播層 */
+.headerOutSide{
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    border-radius: 5%;
+}
+#headerInSide{
+    width: 100%;
+    letter-spacing: 0;
+    position: absolute;
+}
+.header img{
+    float: left;
+}
+
+
+
+/* 主內容層 */
+article{
+    width: 70%;
+    margin: 0 auto;
+}
+h1{
+    margin-left: 130px;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+section p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 主內容層---大頭貼層 */
+.topOne{
+    width: 90%;
+    margin: 15% auto;
+    z-index: 1;
+}
+.topOneOutSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+.topOne img{
+    width: 50%;
+    border-radius: 35%;
+    /* animation: topOneImgMove 3s infinite alternate; */
+}
+
+/* @keyframes topOneImgMove{
+    from{
+        transform: translateY(-40px);
+    }
+} */
+
+
+/* 頁尾 */
+.footer{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(110, 110, 110, 0.138);
+    text-align: center;
+}
+.footerText{
+    display: inline-block;
+    text-align: center;
+}
+.footerText a{
+    vertical-align: middle;
+}
+
+
+/* 天氣預報 */
+h3{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+#box{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.show{
+    text-align: center;
+}
+
+.show button{
+    width: 150px;
+    height: 50px;
+    margin-top: 5px;
+}
+.show button:hover{
+    transition: all 3s;
+    background-color: aquamarine;
+}

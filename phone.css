@@ -1,0 +1,60 @@
+@media screen and (max-width : 767px){
+    /* 導覽---Home */
+    .navigatorHome p{
+        font-size: 2rem;
+        top: 10px;
+    }
+
+
+    /* 導覽---Ul */
+    .navigatorUl{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        z-index: 9999;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(110, 110, 110, 1);
+    }
+    .navigatorUl.openMenu{
+        left: 0;
+        transition: all 1s ease-in-out;
+    }
+    .navigatorLi{
+        margin: 30px auto;
+    }
+
+    /* 導覽---漢堡選單層 */
+    .hamburger{
+        display: block;
+    }
+
+    /* 圖片輪播層 */
+    .headerOutSide{
+        display: none;
+    }
+    
+    /* 主內容層 */
+    h1{
+        font-size: 2rem;
+        margin-left: auto;
+        letter-spacing: 6px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        line-height: 30px;
+    }
+    .topOneOutSide{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .topOne{
+        z-index: -1;
+    }
+}
