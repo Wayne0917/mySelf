@@ -22,9 +22,9 @@
 <nav class="navigator">
     <div class="navigatorHome"><a href=""><img src="./圖片素材/HomeLogo.png" alt=""><p>HOME</p></a></div>
         <ul class="navigatorUl">
-            <li class="navigatorLi"><a href="#mySelf">關於我</a></li>
-            <li class="navigatorLi"><a href="#experience">經歷</a></li>
-            <li class="navigatorLi"><a href="#future expectations">未來期許</a></li>
+            <li class="navigatorLi"><a id="toChange" href="#mySelf">關於我</a></li>
+            <li class="navigatorLi"><a id="toChange" href="#experience">經歷</a></li>
+            <li class="navigatorLi"><a id="toChange" href="#future expectations">未來期許</a></li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -33,6 +33,13 @@
         </div>
 </nav>
 
+                            <!-- 大頭貼 -->
+<header class="topPhoto">
+<div class="topPhotoOutSide">
+    <img src="./圖片素材/wayne2.jpg" alt="">
+    <h1>我是前端工程師，我叫韋恩，這是關於我自介的網站，希望你們會喜歡</h1>
+</div>
+</header>
 
 
                             <!-- 輪播 -->
@@ -45,15 +52,10 @@
     </div>
 </header>
 
+
                             <!-- 主要內容 -->
-<article>
-    <section class="topOne">
-        <div class="topOneOutSide">
-            <img src="./圖片素材/wayne2.jpg" alt="">
-            <h1>我是前端工程師，我叫韋恩，這是關於我自介的網站，希望你們會喜歡</h1>
-        </div>
-    </section>
-                            <!-- 關於我 -->
+
+<article>                   <!-- 關於我 -->
     <label id="mySelf">
         <section>
             <h2>關於我</h2><hr>
@@ -77,20 +79,17 @@
                 </p>
         </section>
 </article>
-                            <!-- 提取天氣預報 -->
-<div class="show">
-    <h3>天氣小叮嚀</h3>
-    <div id="box"></div>
-    <button id="btn">取得天氣</button>
-</div>
+
 
     <!-- 頁尾 -->
 <footer class="footer">
     <div class="footerText">
-        <p>聯絡我: 0985-309-508</p>
-        <p>信箱: yappy99123@gmail.com</p>
-        <a href="https://www.instagram.com/09_wayne/"><img src="./圖片素材/ig 圖示.png" alt=""></a>
-        <a href="https://www.facebook.com/weilunz1"><img src="./圖片素材/fb 圖示.png" alt=""></a>
+        <div>聯絡我: 0985-309-508</div>
+        <div>信箱: yappy99123@gmail.com</div>
+            <div class="footerIcon">
+            <a href="https://www.instagram.com/09_wayne/"><img src="./圖片素材/ig 圖示.png" alt=""></a>
+            <a href="https://www.facebook.com/weilunz1"><img src="./圖片素材/fb 圖示.png" alt=""></a>
+            </div>
     </div>
 </footer>
     
@@ -99,4 +98,3 @@
     <script src="toolBox.js"></script>
 </body>
 </html>
-

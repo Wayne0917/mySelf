@@ -1,5 +1,5 @@
 /* 網頁初始化 */
-*{
+*{  
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -8,6 +8,7 @@
     font-family: "ZCOOL QingKe HuangYou", sans-serif;
     font-weight: 400;
     font-style: normal;
+    position: relative;
 }
 p{
     letter-spacing: 7px;
@@ -89,23 +90,59 @@ h2{
 }
 
 
+
+/* 大頭貼層 */
+.topPhoto{
+    width: 70%;
+    position: relative;
+    top: 170px;
+    left: -150px;
+}
+.topPhotoOutSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+    line-height: 50px;
+}
+.topPhotoOutSide img{
+    max-width: 30%;
+    border-radius: 35%;
+    animation: topOneImgMove 3s infinite alternate;
+}
+
+@keyframes topOneImgMove{
+    from{
+        transform: translateY(-30px);
+    }
+}
+h1{
+    width: 300px;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+
+
 /* 圖片輪播層 */
 .headerOutSide{
-    width: 1200px;
+    width: 700px;
     height: 500px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    font-size: 0;
+    margin-left: 20px;    
     border-radius: 5%;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 220px;
+    right: 130px;
 }
 #headerInSide{
     width: 100%;
-    letter-spacing: 0;
     position: absolute;
 }
 .header img{
-    float: left;
+    float: right;
+    clear: both;
 }
 
 
@@ -114,79 +151,32 @@ h2{
 article{
     width: 70%;
     margin: 0 auto;
-}
-h1{
-    margin-left: 130px;
-    font-size: 2rem;
-    letter-spacing: 10px;
+    display: none;
 }
 section p{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 主內容層---大頭貼層 */
-.topOne{
-    width: 90%;
-    margin: 15% auto;
-    z-index: 1;
-}
-.topOneOutSide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 50px;
-}
-.topOne img{
-    width: 50%;
-    border-radius: 35%;
-    /* animation: topOneImgMove 3s infinite alternate; */
-}
-
-/* @keyframes topOneImgMove{
-    from{
-        transform: translateY(-40px);
-    }
-} */
-
 
 /* 頁尾 */
 .footer{
     width: 100%;
-    height: 25%;
-    background-color: rgba(110, 110, 110, 0.138);
+    background-color: rgba(110, 110, 110, 0.199);
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    padding: 20px;
 }
 .footerText{
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+.footerText div:nth-child(1){
+    margin-left: 40px;
 }
 .footerText a{
     vertical-align: middle;
-}
-
-
-/* 天氣預報 */
-h3{
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-#box{
-    width: 60%;
-    height: 300px;
-    border: 1px solid black;
-    margin: 0 auto;
-}
-
-.show{
-    text-align: center;
-}
-
-.show button{
-    width: 150px;
-    height: 50px;
-    margin-top: 5px;
-}
-.show button:hover{
-    background-image: url(./圖片素材/weather.jpg);
-    background-repeat: no-repeat;
 }
