@@ -11,10 +11,10 @@
     position: relative;
 }
 p{
-    letter-spacing: 7px;
+    letter-spacing: 6px;
     font-size: 2rem;
     margin-bottom: 10%;
-    line-height: 50px;
+    line-height: 40px;
 }
 h2{
     letter-spacing: 7px;
@@ -52,6 +52,7 @@ h2{
 }
 .navigatorHome p{
     position: absolute;
+    top: 6px;
     left: 67px;
     letter-spacing: 0;
 }
@@ -147,14 +148,23 @@ h1{
 
 
 
-/* 主內容層 */
-article{
-    width: 70%;
-    margin: 0 auto;
-    display: none;
+/* 主要內容層 */
+section{
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    z-index: -1;
+    position: absolute;
 }
 section p{
+    font-size: 27px;
     font-family: Arial, Helvetica, sans-serif;
+}
+section img{
+    border-radius: 30% 10% 30% 10%;
 }
 
 
@@ -180,3 +190,4 @@ section p{
 .footerText a{
     vertical-align: middle;
 }
+
