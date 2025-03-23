@@ -1,92 +1,256 @@
-@media screen and (min-width: 768px) and (max-width: 1290px){
-    /* 導覽最外層 */
-    .navigator{
-        max-width: 100%;
-        height: 80px;
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-    }
+/* 網頁初始化 */
+*{  
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: "ZCOOL QingKe HuangYou", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* position: relative; */
+}
+p{
+    letter-spacing: 6px;
+    font-size: 2rem;
+    margin-bottom: 10%;
+    line-height: 40px;
+}
+h2{
+    letter-spacing: 7px;
+    margin: 30px;
+    font-size: 5rem;
+    text-align: center;
+}
 
-    
-    /* 導覽列Ul */
-    .navigatorUl{
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        z-index: 9999;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(110, 110, 110);
-    }
-    .navigatorUl.openMenu{
-        left: 0;
-        transition: all 1.5s ease-in-out;
-    }
-    .navigatorLi{
-        margin: 30px auto;
-    }
+/* 導覽---最外層 */
 
-
-    /* 導覽---漢堡選單層 */
-    .hamburger{
-        display: block;
-    }
-
-
-    /* 圖片輪播層 */
-    .headerOutSide{
-        display: none;
-    }
+.navigator{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(110, 110, 110, 0.199);
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
 
 
-    /* 主內容層 */
-    article{
-        max-width: 100%;
-        margin: 0 auto;
-    }
+/* 導覽---Home */
+.navigatorHome{
+    margin-left: 5%;
+}
+.navigatorHome a{
+    position: relative;
+}
+.navigatorHome img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+}
+.navigatorHome p{
+    position: absolute;
+    top: 6px;
+    left: 67px;
+    letter-spacing: 0;
+}
 
 
-    /*大頭貼層 */
-    .topPhoto{
-        width: 100%;
-        margin-left: 20%;
-    }
-    .topPhotoOutSide{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        z-index: -1;
-        line-height: 50px;
-    }
-    h1{
-        margin-left: 100px;
-        font-size: 1.5rem;
-        letter-spacing: 5px;
-    }
+/* 導覽---Ul層 */
+.navigatorUl{
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+.navigatorLi{
+    margin: 0 50px;
+    cursor: pointer;
+}
+.navigatorLi:hover{
+    text-shadow: 1px 1px black;
+    border-bottom: 5px solid black;
+    transform: scale(0.9);
+    transition: 1.5s;
+}
+/* 導覽---漢堡選單層 */
+.hamburger{
+    display: none;
+    cursor: pointer;
+    align-content: center;
+    margin-right: 10px;
+    position: relative;
+    z-index: 10000;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 5px 50px;
+    background-color: black;
+}
 
 
-    /* 關於我、經歷、未來期許層 */
-    article h2 {
-        font-size: 2rem;
+
+/* 大頭貼層 */
+.topPhoto{
+    width: 70%;
+    position: relative;
+    top: 170px;
+    left: -150px;
+    z-index: -1;
+}
+.topPhotoOutSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 50px;
+}
+.topPhotoOutSide img{
+    max-width: 30%;
+    border-radius: 35%;
+    animation: topOneImgMove 3s infinite alternate;
+}
+
+@keyframes topOneImgMove{
+    from{
+        transform: translateY(-30px);
     }
-    article p {
-        font-size: 1.2rem;
-        line-height: 30px;
-    }
+}
+h1{
+    width: 300px;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
 
 
-    /* 頁尾 */
-    .footerText{
-        flex-direction: column;
-    }
-    .footerText div:nth-child(2){
-        margin: 45px 0;
-    }
-    footer p{
-        font-size: 1.5rem;
-    }
+
+/* 圖片輪播層 */
+.headerOutSide{
+    width: 700px;
+    height: 500px;
+    margin-left: 20px;    
+    border-radius: 5%;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 220px;
+    right: 130px;
+}
+#headerInSide{
+    width: 100%;
+    position: absolute;
+}
+.header img{
+    float: right;
+    clear: both;
+}
+
+
+
+/* 主要內容層 */
+section{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    z-index: -1;
+    position: absolute;
+}
+section p{
+    font-size: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section img{
+    border-radius: 30% 10% 30% 10%;
+}
+
+
+/* 頁尾 */
+.footer{
+    width: 100%;
+    background-color: rgba(110, 110, 110, 0.199);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    padding: 20px;
+}
+.footerText{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+.footerText div:nth-child(1){
+    margin-left: 40px;
+}
+.footerText a{
+    vertical-align: middle;
+}
+
+
+/* 小工具 */
+#toolInside{
+    margin: 5% 40%;
+    position: fixed;
+    z-index: -1;
+
+}   
+.outSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 7%;
+    padding: 50px;
+    background-image: url(./圖片素材/bankImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.outSide div{
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+.outSide h1{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+input{
+    width: 350px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.357);
+    border-radius: 3%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+select{
+    width: 300px;
+    height: 50px;
+    margin: 20px auto;
+    border: 1px solid rgba(0, 0, 0, 0.357);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+button{
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: royalblue;
+    border-radius: 3%;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.378);
+}
+#show{
+    font-size: 1.5rem;
 }

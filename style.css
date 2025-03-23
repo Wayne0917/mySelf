@@ -8,7 +8,7 @@
     font-family: "ZCOOL QingKe HuangYou", sans-serif;
     font-weight: 400;
     font-style: normal;
-    position: relative;
+    /* position: relative; */
 }
 p{
     letter-spacing: 6px;
@@ -66,6 +66,7 @@ h2{
 }
 .navigatorLi{
     margin: 0 50px;
+    cursor: pointer;
 }
 .navigatorLi:hover{
     text-shadow: 1px 1px black;
@@ -98,12 +99,12 @@ h2{
     position: relative;
     top: 170px;
     left: -150px;
+    z-index: -1;
 }
 .topPhotoOutSide{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
     line-height: 50px;
 }
 .topPhotoOutSide img{
@@ -151,7 +152,7 @@ h1{
 /* 主要內容層 */
 section{
     width: 90%;
-    margin: 60px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,3 +192,65 @@ section img{
     vertical-align: middle;
 }
 
+
+/* 小工具 */
+#toolInside{
+    margin: 5% 40%;
+    position: fixed;
+    z-index: -1;
+
+}   
+.outSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 7%;
+    padding: 50px;
+    background-image: url(./圖片素材/bankImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.outSide div{
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+.outSide h1{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+input{
+    width: 350px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.357);
+    border-radius: 3%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+select{
+    width: 300px;
+    height: 50px;
+    margin: 20px auto;
+    border: 1px solid rgba(0, 0, 0, 0.357);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+button{
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: royalblue;
+    border-radius: 3%;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.378);
+}
+#show{
+    font-size: 1.5rem;
+}

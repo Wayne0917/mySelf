@@ -2,7 +2,7 @@
     /* 導覽---Home */
     .navigatorHome p{
         font-size: 2rem;
-        top: 10px;
+        top: 6px;
     }
 
 
@@ -20,7 +20,7 @@
     }
     .navigatorUl.openMenu{
         left: 0;
-        transition: all 1s ease-in-out;
+        transition: all 0.7s ease-in-out;
     }
     .navigatorLi{
         margin: 30px auto;
@@ -34,15 +34,15 @@
 
 /* 大頭貼層 */
 .topPhoto{
-    position: relative;
-    top: 100px;
-    left: 150px;
+    position: fixed;
+    top: 200px;
+    left: 120px;
 }
 .topPhotoOutSide img{
     width: 100%;
 }
 h1{
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 1.5rem;
     letter-spacing: 4px;
     text-align: center;
@@ -55,13 +55,17 @@ h1{
     }
     
     /* 主內容層 */
-    h2{
-        font-size: 2rem;
+    section {
+        margin: 0 auto;
     }
-    p {
-        font-size: 1.2rem;
-        letter-spacing: 4px;
-        line-height: 30px;
+    h2{
+        font-size: 2.3rem;
+    }
+    section p{
+        height: 340px;
+        overflow: auto;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
     }
 
 
@@ -72,7 +76,33 @@ h1{
     .footerText div:nth-child(2){
         margin: 45px auto;
     }
-    footer p{
-        font-size: 1.5rem;
-    }
+
+        /* 小工具 */
+        #toolInside{
+            margin: 10% 30%;
+        }
+        .outSide{
+            padding: 10px;
+        }
+        .outSide h1{
+            font-size: 2rem;
+        }
+        toolInside{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 230px;
+            height: 30px;
+        }
+        select{
+            width: 200px;
+            height: 30px;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+            font-size: 1.5rem;
+        }
 }
